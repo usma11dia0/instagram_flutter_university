@@ -6,7 +6,10 @@ class FeedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('フィード')),
+      appBar: AppBar(
+        title: const Text('フィード'), 
+        centerTitle: true
+      ),
     );
   }
 }
