@@ -157,18 +157,41 @@ class MyPage extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               primary: false,
               crossAxisCount: 3,
-              children: <Widget>[
-                Image.network(
-                  'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
+              children: const <Widget>[
+                InstagramPostItem(
+                  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
                 ),
-                Image.network(
-                  'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
+                InstagramPostItem(
+                  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
+                ),
+                InstagramPostItem(
+                  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
+                ),
+                InstagramPostItem(
+                  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
                 ),
               ],
             )
           ]
         ),
       )
+    );
+  }
+}
+
+class InstagramPostItem extends StatelessWidget {
+  const InstagramPostItem({
+    super.key, 
+    required this.imageUrl
+  });
+
+  final String imageUrl;
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.network(
+      imageUrl,
+      fit: BoxFit.cover
     );
   }
 }
