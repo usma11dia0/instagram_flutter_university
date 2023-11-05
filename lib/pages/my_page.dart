@@ -10,137 +10,162 @@ class MyPage extends StatelessWidget {
         title: const Text('マイページ'), 
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                Image.network(
-                  'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png',
-                  width: 60,
-                  height: 60, 
-                ),
-                const Spacer(),
-                const Column (
-                  children: [
-                    Text(
-                      '7,041', 
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
-                    Text('投稿')
-                  ],
-                ),
-                const SizedBox(width: 16),
-                const Column (
-                  children: [
-                    Text(
-                      '4.6億',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
-                    Text(
-                      'フォロワー',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 16),
-                const Column (
-                  children: [
-                    Text('99'),
-                    Text('フォロー')
-                  ],
-                ),
-              ],
-            ),
-            const SizedBox(height: 16),
-            const Text(
-              'Instagram',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
-            ),
-            const Text(
-              '#YoursToMake',
-              style: TextStyle(
-                color: Colors.blue,
-              ),
-            ),
-            const Text(
-              'help.instagram.com',
-              style: TextStyle(
-                color: Colors.blue,
-              ),
-            ),
-            const SizedBox(height: 8,),
-            Row(
-              children: [
-                Expanded(
-                  child: Row(
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children: [
+                  Image.network(
+                    'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png',
+                    width: 60,
+                    height: 60, 
+                  ),
+                  const Spacer(),
+                  const Column (
                     children: [
-                      Expanded(
-                        child: OutlinedButton(
-                          onPressed:(){}, 
-                          style: OutlinedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(4),
-                            )
-                          ),
-                          child: const Text(
-                            'フォロー中',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12,
-                            ),
-                          ),
+                      Text(
+                        '7,041', 
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
                         ),
                       ),
-                      const SizedBox(width: 4),
-                      Expanded(
-                        child: OutlinedButton(
-                          onPressed:(){}, 
-                          style: OutlinedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                          ),
-                          child: const Text(
-                            'メッセージ', 
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12,
-                            ),
-                          ),
+                      Text('投稿')
+                    ],
+                  ),
+                  const SizedBox(width: 16),
+                  const Column (
+                    children: [
+                      Text(
+                        '4.6億',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                      Text(
+                        'フォロワー',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
                         ),
                       ),
                     ],
                   ),
-                ),
-                const SizedBox(width: 4),
-                OutlinedButton(
-                  onPressed:(){},
-                  style: OutlinedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
+                  const SizedBox(width: 16),
+                  const Column (
+                    children: [
+                      Text('99'),
+                      Text('フォロー')
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Instagram',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
                     ),
                   ),
-                  child: const Icon(Icons.keyboard_arrow_down, color: Colors.black)
+                  Text(
+                    '#YoursToMake',
+                    style: TextStyle(
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Text(
+                    'help.instagram.com',
+                    style: TextStyle(
+                      color: Colors.blue,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: OutlinedButton(
+                            onPressed:(){}, 
+                            style: OutlinedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(4),
+                              )
+                            ),
+                            child: const Text(
+                              'フォロー中',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Expanded(
+                          child: OutlinedButton(
+                            onPressed:(){}, 
+                            style: OutlinedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                            ),
+                            child: const Text(
+                              'メッセージ', 
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  OutlinedButton(
+                    onPressed:(){},
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                    ),
+                    child: const Icon(Icons.keyboard_arrow_down, color: Colors.black)
+                  ),
+                ],
+              ),
+            ),
+            GridView.count(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              primary: false,
+              crossAxisCount: 3,
+              children: <Widget>[
+                Image.network(
+                  'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
+                ),
+                Image.network(
+                  'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
                 ),
               ],
-            ),
+            )
           ]
         ),
       )
