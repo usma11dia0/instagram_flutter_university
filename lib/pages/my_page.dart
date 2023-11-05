@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MyPage extends StatelessWidget {
-  const MyPage({super.key});
+  MyPage({super.key});
+
+  final images = [
+    'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png',
+    'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png',
+    'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -157,20 +163,9 @@ class MyPage extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               primary: false,
               crossAxisCount: 3,
-              children: const <Widget>[
-                InstagramPostItem(
-                  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
-                ),
-                InstagramPostItem(
-                  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
-                ),
-                InstagramPostItem(
-                  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
-                ),
-                InstagramPostItem(
-                  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
-                ),
-              ],
+              children: images.map((imageUrl) {
+                return InstagramPostItem(imageUrl: imageUrl);
+              }).toList(),
             )
           ]
         ),
